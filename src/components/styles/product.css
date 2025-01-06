@@ -1,0 +1,21 @@
+.product{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 10px;
+
+    height: 355px;
+    width: 270px;
+
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+.product img{
+    width: 250px;
+}
+
+.product h3{
+    margin: 0;
+    
+}
