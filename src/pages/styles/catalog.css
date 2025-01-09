@@ -5,5 +5,13 @@
 .catalog h1 {
     text-align: center;
     padding-top: 20px;
-    color: blue;
+    color: rgb(15, 52, 84);
+}
+
+.catalog .filter {
+    margin-bottom: 12px;
+}
+
+.catalog .filter button {
+    margin-right: 5px;
 }

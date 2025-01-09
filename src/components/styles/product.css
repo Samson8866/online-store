@@ -9,10 +9,22 @@
 
     display: inline-block;
     margin: 0 10px 10px 0;
+
+    vertical-align: top;
 }
 
+.product:hover{
+    border-color: darkblue;
+    border-width: 2px;
+    box-shadow: 2px 2px 8px 0px gray;
+}
 .product img{
     width: 250px;
+    height: 250px;
+}
+
+.product:hover img {
+    transform: skewX(-1deg);
 }
 
 .product h3{

@@ -5,7 +5,7 @@ import "./styles/home.css";
 function Home(){
     return(
         <div className="home page">
-            <h1>Samson's Online Store</h1>
+            <h1>Stay Fresh Apparel</h1>
         </div>
     );
 }
