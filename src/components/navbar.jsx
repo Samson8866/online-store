@@ -1,8 +1,15 @@
+import { useContext } from "react";
+import GlobalContext from "../state/globalContext";
 import "./styles/navbar.css"
 
 import { Link } from 'react-router-dom';
 
+
 function Navbar() {
+
+    const user = useContext(GlobalContext).user;
+    const cart = useContext(GlobalContext).cart;
+
     return (
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
   <div className="container-fluid">
@@ -19,6 +26,10 @@ function Navbar() {
         <li className="nav-item">
           <Link className="nav-link" to="/catalog">Catalog</Link>
         </li>
+
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/admin">Admin</Link>
+        </li>
         <li className="nav-item dropdown">
           <Link className="nav-link dropdown-toggle" to="/about" role="button" >
             About
@@ -29,15 +40,21 @@ function Navbar() {
             <li><hr className="dropdown-divider"/></li>
             <li><a className="dropdown-item" href="#">Something else here</a></li>
           </ul>
+
+          
         </li>
         <li className="nav-item">
           <a className="nav-link disabled" aria-disabled="true"></a>
         </li>
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div className="d-flex" role="search">
+
+        <button className="btn btn-outline-light">{user.name}</button>
+
+        <Link className="btn btn-outline-light" to="/cart">
+            {cart.length}
+        </Link>
+      </div>
     </div>
   </div>
 </nav>
