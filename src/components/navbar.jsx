@@ -52,7 +52,7 @@ function Navbar() {
         <button className="btn btn-outline-light">{user.name}</button>
 
         <Link className="btn btn-outline-light" to="/cart">
-            {cart.length}
+            <span className="badge text-bg-primary">{cart.length}</span> View Cart
         </Link>
       </div>
     </div>
